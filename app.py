@@ -18,7 +18,7 @@ def display_intro():
 
     with col_right:
         image_path = "https://raw.githubusercontent.com/Samuelchazy/Educative.io/0d5526803b4f9993b069d3c4460fe3caf69e553e/images/toyota_logo.png"
-        st.image(image_path, use_column_width=True)
+        st.image(image_path, use_container_width=True)
 
     # display image and video
     col_left, col_right = st.columns(2)
@@ -29,7 +29,7 @@ def display_intro():
 
     with col_right:
         image_path = "https://raw.githubusercontent.com/Samuelchazy/Educative.io/f3a444c05570820c63ba9b79c68eb0f2b1214b92/images/Toyota_1.jpg"
-        st.image(image_path, use_column_width=True)
+        st.image(image_path, use_container_width=True)
 
 display_intro()
 
