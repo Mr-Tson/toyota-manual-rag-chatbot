@@ -3,10 +3,7 @@ from tempfile import NamedTemporaryFile
 from langchain_community.document_loaders import PyPDFLoader
 
 
-def upload_pdf_file():
-
-    # upload pdf file
-    uploaded_pdf_file = st.file_uploader("Upload your .pdf file", type="pdf")
+def upload_pdf_file(uploaded_pdf_file):
 
     if uploaded_pdf_file:
 
@@ -24,4 +21,36 @@ def upload_pdf_file():
 
         return content
 
+def load_file():
+    # upload pdf file
+    uploaded_pdf_file = st.file_uploader("Upload your .pdf file", type="pdf")
+
+    # display the PDF file and the images
+    with st.spinner('Loading PDF content. Please wait around a minute...'):
+        content = upload_pdf_file(uploaded_pdf_file)
+
+    if content:
+        with st.container(height=600, border=False):
+            col_left, col_right = st.columns(2)
+
+            ###################################### Display the images #####################################
+            with col_left:
+                image_path = "https://raw.githubusercontent.com/Samuelchazy/Educative.io/19d3100db50749489689a5c21029c3499722b254/images/Toyota_3.jpg"
+                st.image(image_path, use_container_width=True)
+
+                image_path = "https://raw.githubusercontent.com/Samuelchazy/Educative.io/19d3100db50749489689a5c21029c3499722b254/images/Toyota_4.jpg"
+                st.image(image_path, use_container_width=True)
+
+            with col_right:
+                image_path = "https://raw.githubusercontent.com/Samuelchazy/Educative.io/19d3100db50749489689a5c21029c3499722b254/images/Toyota_5.jpg"
+                st.image(image_path, use_container_width=True)
+
+                image_path = "https://raw.githubusercontent.com/Samuelchazy/Educative.io/19d3100db50749489689a5c21029c3499722b254/images/Toyota_6.jpg"
+                st.image(image_path, use_container_width=True)
+
+        return content
+
+    else:
+        st.error('User Manual not found')
+        return None
 
