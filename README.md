@@ -23,4 +23,9 @@ This project is for educational purposes only. It is not affiliated with, endors
 Upload a PDF of a Toyota manual using the file uploader. Once the document is processed, you can ask questions in the chat box, and the bot will provide answers based on the manual's content.
 
 # License
-This project is licensed under the **MIT License**. For further details refer to the [LICENSE][toyota-manual-rag-chatbot/license].
+This project is licensed under the **MIT License**. For further details refer to the [LICENSE](https://github.com/Mr-Tson/toyota-manual-rag-chatbot/blob/main/LICENSE).
+
+# About This Project
+
+This project is a personal learning project for educational purposes. It follows the tutorial "Build AI Chatbots with Open-Source LLMs, LangChain, and Streamlit
+" from educative. I am building this project locally to understand the concepts of Retrieval-Augmented Generation (RAG) and Streamlit application development.
