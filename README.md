@@ -29,3 +29,8 @@ This project is licensed under the **MIT License**. For further details refer to
 
 This project is a personal learning project for educational purposes. It follows the tutorial "Build AI Chatbots with Open-Source LLMs, LangChain, and Streamlit
 " from educative. I am building this project locally to understand the concepts of Retrieval-Augmented Generation (RAG) and Streamlit application development.
+
+# Future Work
+
+* Add custom preprocessing-pipeline for pdf-file
+* Implement multi-modal chatbot to process images and text
