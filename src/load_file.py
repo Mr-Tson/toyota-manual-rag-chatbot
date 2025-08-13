@@ -2,7 +2,7 @@ import streamlit as st
 from tempfile import NamedTemporaryFile
 from langchain_community.document_loaders import PyPDFLoader
 
-
+@st.cache_data
 def upload_pdf_file(uploaded_pdf_file):
 
     if uploaded_pdf_file:
