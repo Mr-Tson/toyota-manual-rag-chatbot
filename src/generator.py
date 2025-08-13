@@ -12,11 +12,11 @@ def generate_answer(re_written_query, relevant_chunks):
         st.error("GROQ_API_KEY not found in environment variables.")
         return None
 
-    model_name = "llama-3.1-70b-versatile"
-    llm = ChatGroq(temperature=0.5, groq_api_key=groq_api_key, model_name=model_name)
+    model_name = "llama-3.3-70b-versatile"
+    llm = ChatGroq(temperature=0.5, model_name=model_name)
 
     # fetch the chat history
-    history = "\n".join([f"{message['role']: message['content']}" for message in st.session_state.messages])
+    history = "\n".join([f"{message['role']}: {message['content']}" for message in st.session_state.messages])
 
     # define the prompt and prompt template using COT prompting
     template = """
