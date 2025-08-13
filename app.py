@@ -1,5 +1,7 @@
 import streamlit as st
 
+from session_states import initialize_params
+
 # Set the Streamlit page parameters
 st.set_page_config(layout="wide",
                    initial_sidebar_state='expanded',
@@ -32,4 +34,4 @@ def display_intro():
         st.image(image_path, use_container_width=True)
 
 display_intro()
-
+initialize_params()
