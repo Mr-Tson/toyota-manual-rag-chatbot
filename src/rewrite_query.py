@@ -8,14 +8,14 @@ from langchain_core.output_parsers import StrOutputParser
 def rewrite_user_query(user_query):
 
     # write down the original user query
-    with st.spinner(border=True):
+    with st.container(border=True):
         st.markdown(user_query)
 
 
     # define the LLM parameters
     groq_api_key = os.environ["GROQ_API_KEY"]
-    model_name = "llama3-8b-8192"
-    llm = ChatGroq(temperature=0.5, grop_api_key=groq_api_key, model_name=model_name)
+    model_name = "llama3.1-8b-instant"
+    llm = ChatGroq(temperature=0.5, model_name=model_name)
 
     # define the re-writing query template with few shot examples
     template = f"""Provide three better search queries for the web search engine to answer the given query.
